@@ -22,6 +22,10 @@ type (
 		item    T     // item to store
 		expired int64 // expiration time in nanoseconds
 	}
+	//cacheItem struct {
+	//	item    string     // item to store
+	//	expired int64 // expiration time in nanoseconds
+	//}
 )
 
 // NewCache creates new cache with default expiration time
