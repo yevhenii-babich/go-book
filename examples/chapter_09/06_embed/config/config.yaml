@@ -1,0 +1,8 @@
+settings:
+  file: 'config.yaml'
+  section: 'settings'
+  languages:
+    - 'en'
+    - 'de'
+    - 'fr'
+    - 'it'
