@@ -1,0 +1,33 @@
+### Default route
+GET http://localhost:8080/
+Content-Type: application/json
+Accept: */*
+
+{
+    "name": "John",
+    "role": "Developer",
+    "age": 30
+}
+
+
+### Send a POST request to the server
+POST http://localhost:8080/greet
+Content-Type: application/json
+Accept: application/json
+
+[
+  {
+    "name": "John",
+    "role": "Developer",
+    "age": 30
+  },
+  {
+    "name": "Smith",
+    "role": "Manager",
+    "age": 35
+  }
+]
+### Send a GET request to the server
+GET http://localhost:8080/help
+
+###

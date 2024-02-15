@@ -1,0 +1,30 @@
+### Get products
+GET http://localhost:8080/products
+Accept: application/json
+
+### Create new product
+POST http://localhost:8080/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Product 1",
+  "ID": 102
+}
+
+### Update product
+PUT http://localhost:8080/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Product 211",
+  "ID": 111
+}
+
+### Delete product
+DELETE http://localhost:8080/products?id=1
+
+### Get product by ID
+GET http://localhost:8080/products?id=2
+Accept: application/json
