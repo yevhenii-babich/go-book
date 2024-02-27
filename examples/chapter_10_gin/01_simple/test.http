@@ -1,0 +1,4 @@
+GET localhost:8080/ping
+###
+GET localhost:8080/pong
+###

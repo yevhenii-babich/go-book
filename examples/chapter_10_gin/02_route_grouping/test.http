@@ -1,0 +1,10 @@
+GET http://localhost:8080/api/open-data
+###
+GET http://localhost:8080/api/secure-data
+###
+GET http://localhost:8080/api/secure-data
+Authorization: Basic dXNlcm5hbWUxOnBhc3N3b3JkMQ==
+###
+GET http://localhost:8080/api/secure-data
+Authorization: Basic dXNlcm5hbWUyOnBhc3N3b3JkMg==
+###

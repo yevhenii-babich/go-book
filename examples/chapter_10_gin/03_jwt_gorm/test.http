@@ -1,0 +1,44 @@
+### signup
+POST http://localhost:8080/signup
+Content-Type: application/json
+
+{
+    "email": "user4@mailinator.com",
+      "password": "password4"
+}
+### login ##
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "email": "user@mailinator.com",
+  "password": "password"
+}
+### test protected resource
+GET http://localhost:8080/validate
+
+### get my profile
+GET http://localhost:8080/profile
+
+### create my profile
+POST http://localhost:8080/profile
+Content-Type: application/json
+
+{
+    "full_name": "First User"
+}
+### update my profile
+PUT http://localhost:8080/profile
+Content-Type: application/json
+
+{
+    "full_name": "User Four"
+}
+### get user profile
+GET http://localhost:8080/profile/1
+Accept: application/json
+
+### get profile and user details
+GET http://localhost:8080/all/1
+Accept: application/json
+###
