@@ -1,0 +1,16 @@
+### get /
+GET http://localhost:3000/
+
+### user
+GET http://localhost:3000/api/v1/user
+
+### product
+GET http://localhost:3000/api/v1/product/22222/
+
+### product with name
+GET http://localhost:3000/api/v1/product/my-product-2
+
+### get /
+OPTIONS http://localhost:3000/
+###
+

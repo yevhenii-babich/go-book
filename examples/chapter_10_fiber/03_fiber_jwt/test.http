@@ -1,0 +1,16 @@
+### login
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "email": "test@mail.com",
+  "password": "test12345"
+}
+
+### get protected resource
+GET http://localhost:3000/api/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg1MzI5NDEsImZhdiI6IlRlc3QgVXNlciIsInN1YiI6MX0.MYsABxPGCrNkqKhILeYKY2U3VoYYK0YX35p--PaguIU
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNzA3NTc3NTExLCJmYXYiOiJIZWxsbywgV29ybGQhIn0.-Fbg8RlFptbJRWXPaQ5YBwL46FdkwAFdJ4DcUtE-yXs
+Accept: application/json
+
+

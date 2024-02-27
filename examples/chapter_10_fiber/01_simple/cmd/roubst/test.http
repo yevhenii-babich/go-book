@@ -1,0 +1,24 @@
+##/: Основний маршрут.
+##/greeting/:name: Маршрут з обов'язковим параметром name.
+##/hello/:name?: Маршрут з необов'язковим параметром name.
+##/greet/:name/:age/:city: Маршрут з декількома параметрами.
+
+### root
+GET http://localhost:3000/
+
+### hello with required parameter
+GET http://localhost:3000/greeting/John
+
+### hello with required parameter
+GET http://localhost:3000/greeting/
+
+### hello with optional parameter
+GET http://localhost:3000/hello/John
+
+### hello with optional parameter (no parameter)
+GET http://localhost:3000/hello
+
+### greet with multiple parameters
+GET http://localhost:3000/greet/John/25/Kyiv
+###
+
