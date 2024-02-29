@@ -1,0 +1,22 @@
+GET http://localhost:8080/hello
+###
+
+GET http://localhost:8080/hello
+Accept: application/json
+###
+
+GET http://localhost:8080/hello
+Accept: application/xml
+###
+
+GET http://localhost:8080/hello
+Accept: text/plain
+###
+
+GET http://localhost:8080/hello
+Accept: application/x-yaml
+###
+
+GET http://localhost:8080/hello
+Accept: application/x-toml
+###

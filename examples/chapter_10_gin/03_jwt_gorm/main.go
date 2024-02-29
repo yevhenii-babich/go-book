@@ -24,6 +24,7 @@ func main() {
 	authorized.GET("/profile", controllers.GetProfile)
 	authorized.PUT("/profile", controllers.UpdateProfile)
 	authorized.GET("/profile/:id", controllers.GetProfileByID)  // This is an admin route
+	authorized.GET("/all", controllers.AllProfiles)             // This is an admin route
 	authorized.GET("/all/:profile_id", controllers.GetDataByID) // This is an admin route
 	validated := authorized.Group("/validated")
 	validated.GET("/validate", controllers.Validate) //GET http://validated/validate"

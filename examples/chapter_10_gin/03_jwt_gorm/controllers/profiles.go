@@ -5,6 +5,7 @@ import (
 	"jwt_gorm/initializers"
 	"jwt_gorm/models"
 	"net/http"
+	"strconv"
 )
 
 type profile struct {
@@ -110,7 +111,47 @@ func UpdateProfile(c *gin.Context) {
 func GetProfileByID(c *gin.Context) {
 	// Get the profile id from the req params
 	id := c.Param("id")
-	// Find the profile
+	if id != "" {
+		singleProfile(c, id)
+	}
+	c.AbortWithStatus(http.StatusBadRequest)
+}
+
+func AllProfiles(c *gin.Context) {
+	var profiles []models.Profile
+	limit := c.Query("start")
+	var l, o int = 10, 0
+	if limit != "" {
+		var err error
+		o, err = strconv.Atoi(limit)
+		if err != nil {
+			c.AbortWithError(http.StatusBadRequest, err)
+			return
+		}
+	}
+	offset := c.Query("length")
+	if offset != "" {
+		var err error
+		l, err = strconv.Atoi(offset)
+		if err != nil {
+			c.AbortWithError(http.StatusBadRequest, err)
+			return
+		}
+	}
+	result := initializers.DB.Debug().Limit(l).Offset(o).Find(&profiles)
+
+	if result.Error != nil {
+		c.JSON(http.StatusNotFound, gin.H{
+			"error": "Profile not found.",
+		})
+		return
+	}
+	// Respond
+	c.JSON(http.StatusOK, profiles)
+
+}
+
+func singleProfile(c *gin.Context, id string) {
 	var profile models.ProfileWithUserEmail
 	result := initializers.DB.Debug().Table("profiles").
 		Select("profiles.*, users.email").

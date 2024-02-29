@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Echo Test</title>
+</head>
+<body>
+<h1>WebSocket Echo Test</h1>
+<input type="text" id="message" placeholder="Type a message...">
+<button onclick="sendMessage()">Send</button>
+<hr>
+<div id="output"></div>
+
+<script>
+    let secure = window.location.protocol.includes('https') ? 's':'';
+    var socket = new WebSocket("ws"+secure+"://" + window.location.host + "/ws");
+
+    socket.onopen = function(event) {
+        console.log("WebSocket connected!");
+    }
+
+    socket.onmessage = function(event) {
+        console.log("Received message:", event.data);
+        document.getElementById("output").innerHTML += event.data + "<br>";
+    }
+
+    function sendMessage() {
+        var message = document.getElementById("message").value;
+        socket.send(message);
+        document.getElementById("message").value = "";
+        console.log("Sent message:", message);
+    }
+</script>
+</body>
+</html>

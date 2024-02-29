@@ -41,4 +41,8 @@ Accept: application/json
 ### get profile and user details
 GET http://localhost:8080/all/1
 Accept: application/json
+
+### get profile and user details
+GET http://localhost:8080/all?start=0&length=1
+Accept: application/json
 ###
