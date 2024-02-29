@@ -56,9 +56,9 @@
 2. [Аналіз та обробка JSON](chapter_10_base.md#аналіз-та-обробка-json)
 3. [Створення RESTful API з Go](chapter_10_base.md#приклад-restful-api)
 4. [Framework Fiber для створення сервиса](chapter_10_fiber.md)
-5. Практичне використання Fiber
-6. Framework Gin для створення сервиса
-7. Практичне використання Gin
+5. [Практичне використання Fiber](examples/chapter_10_fiber/)
+6. [Framework Gin для створення сервиса](chapter_10_gin.md)
+7. [Практичне використання Gin](examples/chapter_10_gin/)
 
 ### Розділ 11: Тестування, бенчмаркінг та найкращі практики
 1. Будування юнит-тестів та тестованого коду
